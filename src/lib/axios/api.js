@@ -1,6 +1,6 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
-const API = axios.create({ baseURL: import.meta.env.https://depo24-chat-app-backend.vercel.app/ });
+const API = axios.create({ baseURL: import.meta.env.VITE_DOMAIN_URL });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("cloakCode")) {
